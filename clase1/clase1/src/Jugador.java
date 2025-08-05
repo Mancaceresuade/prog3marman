@@ -1,4 +1,4 @@
-public class Jugador {
+public class Jugador implements IContratable{
     private int id;
     private String nombre;
 
@@ -9,6 +9,11 @@ public class Jugador {
     public Jugador(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
+    }
+
+    public String saludar() throws Exception {
+        throw new Exception("error");
+        //return "Hola, soy " + nombre;
     }
 
     public int getId() {
@@ -30,6 +35,12 @@ public class Jugador {
     @Override
     public String toString() {
         return "Jugador{id=" + id + ", nombre='" + nombre + "'}";
+    }
+
+    @Override
+    public void contratar() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'contratar'");
     }
 
 
