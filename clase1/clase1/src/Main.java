@@ -6,6 +6,33 @@ import java.util.List;
 
 public class Main {
 
+    public double promedio(int[][] mat) {
+        int suma = 0;   // 1               
+        int n = mat.length; // 2           
+        for (int i = 0; i < n; i++) {   // 1 + (n+1) + n
+            for (int j = 0; j < n; j++) { // 1 + (n+1) + n
+                suma = suma + mat[i][j]; // 3n   
+            }
+        } 
+        int cantidad = n * n;   // 1       
+        double promedio = (double) suma / cantidad;  // 3
+        System.out.println("Promedio: " + promedio); // 2
+        return promedio; // 1
+    } // f(n) = 10 + 1 + (n+1) + n + n ( 1 + (n+1) + n + 3n ) 
+    // f(n) = 10 + 1 + (n+1) + n + n ( 1 + n+ 1 + n + 3n ) 
+    // f(n) = 10 + 1 + (n+1) + n + n ( 1 + 5n )
+    // f(n) = 10 + 1 + n + 1 + n + 5n^2
+    // f(n) = 12 + 2n + 5n^2
+    // f(n) <= c g(n)
+    // 12 + 2n + 5n^2 <= 6n^2
+    // encontrar valores de n
+    // f(n) pertenece a O(n)  para n >= ?  y c = ?
+    // 12/n^2 + 2n/n^2 + 5n^2/n^2 <= 6n^2 / n^2
+    
+
+
+
+
     public int sumar(int[] numeros) {
         int suma = 0;  // 1
         int i = 0; // 1
