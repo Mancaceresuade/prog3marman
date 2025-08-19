@@ -30,5 +30,9 @@ public class App {
         return rta; // 1
     } // h(n) = 8n + 4
 
+    private static boolean algunElementoMultiploRecursivo(int[] fila, int elemento) {
+        // caso base tam fila  => suponiendo constante k=0
+        // llamado recursivo, algunElementoMultiploRecursivo(fila, elemento,i+1)
+    } // a = 1, b= 1 , k=0
     
 }
