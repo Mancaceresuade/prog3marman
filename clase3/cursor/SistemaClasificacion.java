@@ -67,20 +67,16 @@ public class SistemaClasificacion {
         if (nodo == null) {
             return;
         }
-        
         double puntajeActual = nodo.elem.getPuntaje();
-        
         // Si el puntaje actual es mayor que pMin, explorar subárbol izquierdo
         // (puede haber jugadores con puntajes más altos en el rango)
         if (puntajeActual > pMin) {
             buscarEnRango(nodo.izq, pMin, pMax, resultado);
         }
-        
         // Si el puntaje actual está en el rango, agregarlo al resultado
         if (puntajeActual >= pMin && puntajeActual <= pMax) {
             resultado.add(nodo.elem);
         }
-        
         // Si el puntaje actual es menor que pMax, explorar subárbol derecho
         // (puede haber jugadores con puntajes más bajos en el rango)
         if (puntajeActual < pMax) {
